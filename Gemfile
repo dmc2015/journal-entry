@@ -1,7 +1,22 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.5.3'
+
+# Authentication
+gem 'devise'
+
+# Bootstrap styling for devise
+gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
+
+# Bootstrapped forms
+gem 'bootstrap_form', '~> 4.0'
+
+# Bootstrap Form Dependency
+gem 'htmlbeautifier'
+
+# Jquery
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
@@ -37,8 +52,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Debugger
+  gem 'pry-byebug'
 end
 
 group :development do
