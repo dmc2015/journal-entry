@@ -66,6 +66,12 @@ Journal Entries
 ### Biggest issue you ran into
 - My personal mac is old, nothing has been updated recently, I had to update the OS, brew, xcode & get rid of things to make room for all the installs. Ended up just using my work machine.
 
+- Some of the libraries I choose for css/bootstrap addons were not as cut and dry as they seemed but they did the job
+
+- Not enough time to do everything I wanted to
+
+- I hadn't done devise in a while so it was a little tricky, but fun to go over
+
 ### What I hope to learn
 #### A refresher on devise
 #### Docker deployment, I've used docker but only lojcally
