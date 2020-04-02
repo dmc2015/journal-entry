@@ -1,2 +1,13 @@
-<h1>Journals#index</h1>
-<p>Find me in app/views/journals/index.html.erb</p>
+<% if @journals.nil? %>
+  <div>
+    <h1>
+      Oh NOOOOO.....
+    </h1>
+
+    It looks like you don't have any journal entries yet.
+
+    <%= link_to "It's coo...you can get started here!", new_user_journal_path(current_user.id) %>
+  </div>
+<% else %>
+
+<% end %>
