@@ -17,6 +17,7 @@ Rails.application.routes.draw do
         resources :journals
       end
 
+      get "journals/home"
       root to: 'journals#index'
     end
 

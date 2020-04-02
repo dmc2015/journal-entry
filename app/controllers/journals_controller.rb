@@ -6,6 +6,8 @@ class JournalsController < ApplicationController
     @journals = Journal.all.sort_by{ |journal| [journal.updated_at, journal.created_at] }.reverse
   end
 
+
+
   def new
     @journal = Journal.new
   end
