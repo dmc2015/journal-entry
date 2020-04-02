@@ -9,6 +9,14 @@ gem 'devise'
 # Bootstrap styling for devise
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 
+# Bootstrapped forms
+gem 'bootstrap_form', '~> 4.0'
+
+# Bootstrap Form Dependency
+gem 'htmlbeautifier'
+
+# Jquery
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
