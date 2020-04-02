@@ -1,2 +1,9 @@
-<h1>Journals#edit</h1>
-<p>Find me in app/views/journals/edit.html.erb</p>
+<h1>Edit Your Journal Entry</h1>
+
+<%= form_with_source do %>
+  <%= bootstrap_form_for @journal, url: "/users/#{current_user[:id]}/journals/#{@journal.id}", method: :put do |form| %>
+    <%= form.text_area :title, placeholder: "Title", label: "Title" %>
+    <%= form.text_area :body, placeholder: "Journal Entry", label: "Journal Entry"%>
+    <%= form.submit %>
+  <% end %>
+<% end %>

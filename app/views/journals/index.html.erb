@@ -9,5 +9,5 @@
     <%= link_to "It's coo...you can get started here!", new_user_journal_path(current_user.id) %>
   </div>
 <% else %>
-
+  <%= render 'templates/index' %>
 <% end %>

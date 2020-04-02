@@ -1,0 +1,24 @@
+<% @journals.each do |journal| %>
+    <div class="journal-wrapper row">
+      <div class="journal-entry col-md card">
+        <h3 class="card-header">
+          <%= link_to "Journal Title: #{journal.title.titleize}", user_journal_path(user_id: current_user.id, id: journal.id)  %>
+        </h3>
+        <span class="card-body">
+          Content: <%= journal.body[0...15].capitalize %>...
+        </span>
+
+        <footer class="blockquote-footer">
+          <div> Last Modified: <%= journal.updated_at.strftime("%^B %d, %Y %I:%M %p") %> </div>
+          <div> Created: <%= journal.created_at.strftime("%^B %d, %Y %I:%M %p") %> </div>
+        </footer>
+
+        <div class="journal-btns">
+          <%= link_to "Edit", edit_user_journal_path(id: journal.id, user_id: current_user.id) %>
+          <%= link_to "Delete", "/users/#{current_user.id}/journals/#{journal.id}", method: :delete %>
+        </div>
+
+      </div>
+
+    </div>
+  <% end %>

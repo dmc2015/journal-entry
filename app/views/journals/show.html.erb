@@ -1,2 +1,12 @@
-<h1>Journals#show</h1>
-<p>Find me in app/views/journals/show.html.erb</p>
+<h1><%= @journal.title %></h1>
+<p><%= @journal.body %></p>
+
+<div class="journal-btns">
+  <%= link_to "Edit",  edit_user_journal_path(id: @journal.id, user_id: current_user.id), class: "btn" %>
+  <%= link_to "Delete", "/users/#{current_user.id}/journals/#{@journal.id}", method: :delete, class: "btn" %>
+
+  <div> Last Modified: <%= @journal.updated_at.strftime("%^B %d, %Y %I:%M %p") %> </div>
+  <div> Created: <%= @journal.created_at.strftime("%^B %d, %Y %I:%M %p") %> </div>
+</div>
+
+
